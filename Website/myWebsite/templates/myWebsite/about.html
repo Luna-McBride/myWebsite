@@ -1,0 +1,72 @@
+{% extends 'myWebsite/base.html' %}
+
+{% block title %}
+About Luna
+{% endblock %}
+
+{% block page %}
+About Me
+{% endblock %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-4">
+			{% load static %}
+			<img height="200px", width="200px", src="{% static "myWebsite/Me.jpg" %}"/>
+		</div>
+		<div class="col-8">
+			<p>My name is Luna McBride. I graduated from the University of Colorado Boulder in December, 2019 with a Bachelors in Computer Science and Japanese. While I have lived in Colorado all of my life, being rooted here has not stopped me from traveling. This includes my study abroad semester, in which I visited each of the main Japanese islands as well as Okinawa.
+			I put high value in learning, from taking summer classes every year for six years to taking courses via Udemy after I graduated to gain more skills. In fact, the creation of this very website stemmed from wanting to learn something new. </p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<br>
+			<h2>What I Know</h2>
+			<p> From my education and beyond, there are a lot of skills that I hope can be useful in the industry. In addition to the baseline data structures and algorithm classes, I took courses on the following: </p>
+			<ul>
+				<li>Data Science</li>
+				<li>Artificial Intelligence</li>
+				<li>Database Systems</li>
+				<li>Object Oriented Programming</li>
+				<li>Software Development</li>
+				<li>Computer Graphics/Animation</li>
+				<li>Japanese Language Classes, including Classical Japanese</li>
+				<li>And More</li>
+			</ul>
+			<br>
+
+			<p> With these classes and more, I was able to build the following skills: </p>
+			<ul>
+				<li>Python</li>
+				<li>Python Libraries, such as Numpy, Pandas, and Scikit Learn</li>
+				<li>MySQL and SQL Server</li>
+				<li>SQL Server Integration Services (SSIS)</li>
+				<li>C/C++</li>
+				<li>Tableau</li>
+				<li>HTML/Bootstrap/Django (Learned from building this site)</li>
+				<li>And More</li>
+			</ul>
+			<br>
+
+			<p> I hope to keep building more skills moving forward, perhaps even figuring out how to integrate more aspects into this site. If you would like to look more into what I have done so far, my GitHub holds a lot of my work. I did lose some of my early work (coursework from my Data Structures class, for example) when my previous computer broke. I have since learned the importance of backing up such files, so I am pretty certain that will not happen again.</p>
+			<br>
+
+			<h2 id="contact", name="contact"> Contact Me</h2>
+			<p> If you would like to contact me, you can reach me by the methods below:</p>
+			<ul>
+				<li>Email: luna.mcbride24@gmail.com</li>
+				<li>Phone: 7202069950</li>
+				<ul>
+					<li>Please text rather than call unless told otherwise in an email. The Scam Likely feature has been having some problems lately in detection, so I prefer to have call times discussed by text or email instead of just getting a random call.</li>
+				</ul>
+			</ul>
+			<br>
+		</div>
+	</div>
+</div>
+{% endblock %}

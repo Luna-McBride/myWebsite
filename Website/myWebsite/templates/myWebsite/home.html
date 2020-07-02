@@ -1,0 +1,58 @@
+{% extends 'myWebsite/base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block page %}
+Home
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<img height="400px", width=100%, src="{% static "myWebsite/Header.jpg" %}"/>
+
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<br>
+			<br>
+			<p style="text-indent:50px;">Welcome to the website of Luna McBride. This is a site built using Django and Bootstrap. Feel free to explore the site to your heart's content. Once you are done here, feel free to look through my Github, LinkedIn, and other links linked below.</p>
+			<br>
+		</div>
+
+		<div class="col-1.5">
+			{% load static %}
+			<img height="100px", width="100px", src="{% static "myWebsite/GitHub-Mark.png" %}"/>
+
+		</div>
+		<div class="col-10.5", align="left", style="margin-top:30px">
+			<div class="link">
+				<b><a href="https://github.com/Luna-McBride", target="_blank"> GitHub </a></b>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+
+<div class="container">
+	<div class="row">
+		<div class="col-1.5">
+			{% load static %}
+			<img height="80px", width="120px", style="margin-top:10px;margin-left:-10px;" src="{% static "myWebsite/Linkedin-logo.png" %}"/>
+
+		</div>
+		<div class="col-10.5", align="left", style="margin-top:30px;margin-left:-10px;">
+			<div class="link">
+				<b><a href="https://www.linkedin.com/in/luna-mcbride-2b8b24186/", target="_blank"> LinkedIn </a></b>
+			</div>
+		</div>
+	</div>
+</div>
+<br> <br>
+<hr class="mt-0 mb-4">
+
+
+<p style="text-indent:50px;"> Note about the above image: this is picture of a wooded path I took on Mount Shiroyama, Kagoshima, Kyushu, Japan that I slightly altered to make it the header for this home page.</p>
+
+{% endblock %}

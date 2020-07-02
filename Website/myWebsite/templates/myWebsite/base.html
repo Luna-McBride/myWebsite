@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+	<style type="text/css">
+		.navbar {
+			background-color:#414141;
+			overflow:hidden;
+			position:fixed;
+			z-index:1;
+			bottom:0;
+			left:0;
+			width:100%; 
+		}
+		.navbar a {
+			float:left;
+			padding:14px 30px;
+			text-decoration:none;
+			color:#f1f1f1;
+			font-size:25px;
+			display:block;
+		}
+		.topnav a:Hover {
+			color:#818181;
+		} 
+
+		.link{}
+		.link a{
+			left:0;
+			font-size:24px;
+			color:#212121;
+		}
+		.link a:Hover{
+			color:#a1a1a1;
+		}
+
+		.bartext{}
+		.bartext a{
+			color:#f1f1f1;
+			font-size:25px;
+			padding:0px 20px;
+		}
+
+		.myWebsite{
+			margin-top:20px;
+			padding:0px 10px;
+		}
+	</style> 
+
+	<!-- Bootstrap Required Metadata -->
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap Required CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<title>{% block title %}{% endblock %}</title>
+
+</head>
+<body>
+
+	<!-- Source: https://getbootstrap.com/docs/4.2/components/navbar/ -->
+	<div class="pos-f-t">
+  		<div class="collapse" id="navbarToggleExternalContent">
+    		<div class="bg-secondary p-4">
+    			<div class="bartext">
+      				<a href="/">Home</a>
+					<a href="/about">About Me</a>
+					<a href="/projects">Projects</a>
+				</div>
+    		</div>
+  		</div>
+  		<nav class="navbar navbar-dark bg-dark">
+    		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      			<span class="navbar-toggler-icon"></span>
+    		</button>
+  		</nav>
+	</div>
+
+
+	<div id="content", name="content", class="myWebsite">
+		<div class="row justify-content-center">
+			<div class="col-8">
+				<h1 class="mt-2" style="text-indent:20px"> {% block page %} {% endblock %}</h1>
+				<hr class="mt-0 mb-4">
+				{% block content %}
+				{% endblock %}
+			</div>
+		</div>
+	</div>
+
+	<div class="navbar">
+		<a href="/about/#contact">Contact Me</a>
+		<a href="https://github.com/Luna-McBride", target="_blank">GitHub</a>
+		<a href="https://www.linkedin.com/in/luna-mcbride-2b8b24186/", target="_blank">LinkedIn</a>
+	</div>
+
+	<!-- Bootstrap Required Javascript for Animations -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

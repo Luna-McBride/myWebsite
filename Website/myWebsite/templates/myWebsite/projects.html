@@ -1,0 +1,101 @@
+{% extends 'myWebsite/base.html' %}
+
+{% block title %}
+Projects
+{% endblock %}
+
+{% block page %}
+My Projects
+{% endblock %}
+
+{% block content %}
+<h2>Django/Bootstrap Project: This Website</h2> <br>
+<div class="container">
+	<div class="row">
+		<div class="col-4">
+			{% load static %}
+			<img height="200px", width="300px", src="{% static "myWebsite/myWebsite.png" %}"/>
+		</div>
+		<div class="col-8">
+			<p> This website itself is a project to show off. Built using a combination of Django and Bootstrap, this website was made for the task of making, well, a website. The base form of this website has three pages, which should become more as I explore more with Django or make more projects in general.</p>
+		</div>
+	</div>
+</div>
+<hr class="mt-0 mb-4">
+<br>
+
+<h2>Tableau Project: Chase Bank Data</h2>
+<div class="container">
+	<div class="row">
+		<div class="col-4">
+			{% load static %}
+			<img height="200px", width="300px", src="{% static "myWebsite/ChaseDepositGraph.png" %}"/>
+		</div>
+		<div class="col-8">
+			<p>This project was a combination of SSIS and Tableau to gain information from deposit data Chase Bank posted on Kaggle (https://www.kaggle.com/chasebank/bank-deposits). SSIS was done first to make sure there were no problems with the data when put into a SQL Server database. This was then pushed back to an Excel file (since free Tableau does not have direct integration with SQL Server) and various graphs were then made in Tableau to gain insight on the data. If you would like to see the data and graphs, see the Github link below.</p> <br>
+		</div>
+
+		<div class="col-1.5">
+			{% load static %}
+			<img height="100px", width="100px", src="{% static "myWebsite/GitHub-Mark.png" %}"/>
+
+		</div>
+		<div class="col-10.5", align="left", style="margin-top:30px">
+			<div class="link">
+				<b><a href="https://github.com/Luna-McBride/PersonalProject-ChaseBankData", target="_blank"> Chase Project Github </a></b>
+			</div>
+	</div>
+</div>
+<hr class="mt-0 mb-4">
+<br><br>
+
+<h2>SQL/SSIS Project: VehicleServices</h2>
+<div class="container">
+	<div class="row">
+		<div class="col-4">
+			{% load static %}
+			<img height="200px", width="300px", src="{% static "myWebsite/VehicleServicesWriteupImage.png" %}"/>
+		</div>
+		<div class="col-8">
+			<p>This project was done in the data preparation section of the Data Science Udemy Course. This, along with other parts of this section, was made to show the SSIS process while showing common errors, such as more or fewer rows than expected. If you would like to see more, check out the word document writeup in the VehicleServices directory (Github link below).</p> <br>
+		</div>
+
+		<div class="col-1.5">
+			{% load static %}
+			<img height="100px", width="100px", src="{% static "myWebsite/GitHub-Mark.png" %}"/>
+
+		</div>
+		<div class="col-10.5", align="left", style="margin-top:30px">
+			<div class="link">
+				<b><a href="https://github.com/Luna-McBride/Data_Science_A-Z---Udemy/tree/master/Data%20Preparation/20200210%20HW%20VehicleService", target="_blank"> VehicleServices Github </a></b>
+			</div>
+	</div>
+</div> 
+<hr class="mt-0 mb-4">
+<br><br>
+
+<h2>Neural Network Project: 5 and 2 (From My AI Class)</h2>
+<div class="container">
+	<div class="row">
+		<div class="col-4">
+			{% load static %}
+			<img height="200px", width="300px", src="{% static "myWebsite/52.png" %}"/>
+		</div>
+		<div class="col-8">
+			<p>Just thought I would throw in an interesting project from one of my classes. This project had me draw 2's and 5's, which were then used for classification purposes in a hopfield network and then multi-layer perceptrons. The code itself is a bit harder to read, which I have been trying to get better about over time, but I think actual reading of the 2's and 5's is interesting, especially since the hopfield had a hard time with my 2's due to how I write them. If you would like to take a look at this project, you can see it through the github link below:</p>
+		</div>
+		<div class="col-1.5">
+			{% load static %}
+			<img height="100px", width="100px", src="{% static "myWebsite/GitHub-Mark.png" %}"/>
+
+		</div>
+		<div class="col-10.5", align="left", style="margin-top:30px">
+			<div class="link">
+				<b><a href="https://github.com/Luna-McBride/CSCI-3202-Intro-to-AI/tree/master/Homework4", target="_blank"> Neural Network (Homework 4) Github </a></b>
+			</div>
+	</div>
+</div> <br><br
+	</div>
+</div>
+<br> <br>
+{% endblock %}
