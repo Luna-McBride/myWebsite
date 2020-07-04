@@ -13,7 +13,10 @@
 		}
 		.navbar a {
 			float:left;
-			padding:14px 30px;
+			padding-top:14px;
+			padding-bottom:14px;
+			padding-left: 15px;
+			padding-right: 5px;
 			text-decoration:none;
 			color:#f1f1f1;
 			font-size:25px;
@@ -37,7 +40,7 @@
 		.bartext a{
 			color:#f1f1f1;
 			font-size:25px;
-			padding:0px 20px;
+			padding-left:20px;
 		}
 
 		.myWebsite{
@@ -76,12 +79,25 @@
   		</nav>
 	</div>
 
+	<!-- The centered rows look bad in mobile, so this is to make
+		them not centered on mobile -->
+	{% load rowtype %}
+	{% load coltype %}
+	{% if request.user_agent.is_mobile != True %}
+		{% get_type "row justify-content-center" as rowType %}
+		{% get_coltype "8" as colType %}
+	{% else %}
+		{% get_type "row" as rowType %}
+		{% get_coltype "12" as colType %}
+	{% endif %}
 
 	<div id="content", name="content", class="myWebsite">
-		<div class="row justify-content-center">
+		<div class="{{rowType}}">
 			<div class="col-8">
-				<h1 class="mt-2" style="text-indent:20px"> {% block page %} {% endblock %}</h1>
+				<h1 class="mt-2" style="text-indent:20px;width:100%;"> {% block page %} {% endblock %}</h1>
 				<hr class="mt-0 mb-4">
+			</div>
+			<div class="col-{{colType}}">
 				{% block content %}
 				{% endblock %}
 			</div>

@@ -11,12 +11,8 @@ About Me
 {% block content %}
 <div class="container">
 	<div class="row">
-		<div class="col-4">
-			{% load static %}
-			<img height="200px", width="200px", src="{% static "myWebsite/Me.jpg" %}"/>
-		</div>
-		<div class="col-8">
-			<p>My name is Luna McBride. I graduated from the University of Colorado Boulder in December, 2019 with a Bachelors in Computer Science and Japanese. While I have lived in Colorado all of my life, being rooted here has not stopped me from traveling. This includes my study abroad semester, in which I visited each of the main Japanese islands as well as Okinawa.
+		<div class="align-self-start">
+			<p> {% load static %} <img class="img-thumbnail float-left", height="200px", width="200px", src="{% static "myWebsite/Me.jpg" %}"/> My name is Luna McBride. I graduated from the University of Colorado Boulder in December, 2019 with a Bachelors in Computer Science and Japanese. While I have lived in Colorado all of my life, being rooted here has not stopped me from traveling. This includes my study abroad semester, in which I visited each of the main Japanese islands as well as Okinawa.
 			I put high value in learning, from taking summer classes every year for six years to taking courses via Udemy after I graduated to gain more skills. In fact, the creation of this very website stemmed from wanting to learn something new. </p>
 		</div>
 	</div>
