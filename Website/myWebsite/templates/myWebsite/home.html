@@ -9,8 +9,18 @@ Home
 {% endblock %}
 
 {% block content %}
+
+<!-- TemplateTag to change the home image height depending on if it is on mobile or not-->
+{% load mainImageSize %}
+{% if request.user_agent.is_mobile != True %}
+	{% get_mainImageHeight "400px" as height %}
+{% else %}
+	{% get_mainImageHeight "300px" as height %}
+{% endif %}
+
+
 {% load static %}
-<img height="400px", width=100%, src="{% static "myWebsite/Header.jpg" %}"/>
+<img height="{{height}}", width=100%, src="{% static "myWebsite/Header.jpg" %}"/>
 
 <div class="container">
 	<div class="row">
