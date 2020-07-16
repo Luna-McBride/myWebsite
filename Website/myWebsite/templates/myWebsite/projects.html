@@ -9,12 +9,12 @@ My Projects
 {% endblock %}
 
 {% block content %}
-<h2 style="padding-left: 20px;">Django/Bootstrap Project: This Website</h2> <br>
-<div class="container", style="padding-left: 40px;">
+<h2>Django/Bootstrap Project: This Website</h2> <br>
+<div class="container">
 	<div class="row">
-		<div class="align-self-start">
+		<div class="align-self-center">
 			{% load static %}
-			<img height="200px", width="300px", src="{% static "myWebsite/myWebsite.png" %}"/>
+			<img height="200px", width="300px" src="{% static "myWebsite/myWebsite.png" %}"/>
 		</div>
 		<div class="align-self-end">
 			<p> This website itself is a project to show off. Built using a combination of Django and Bootstrap, this website was made for the task of making, well, a website. The base form of this website has three pages, which should become more as I explore more with Django or make more projects in general.</p>
@@ -24,8 +24,8 @@ My Projects
 <hr class="mt-0 mb-4">
 <br>
 
-<h2 style="padding-left: 20px;">Tableau Project: Chase Bank Data</h2>
-<div class="container", style="padding-left: 40px;">
+<h2>Tableau Project: Chase Bank Data</h2>
+<div class="container">
 	<div class="row">
 		<div class="align-self-center">
 			{% load static %}
@@ -45,6 +45,33 @@ My Projects
 				<b><a href="https://github.com/Luna-McBride/PersonalProject-ChaseBankData", target="_blank"> Chase Project Github </a></b>
 			</div>
 	</div>
+</div>
+</div>
+<hr class="mt-0 mb-4">
+<br><br>
+
+<h2>Python AI Project: Pac-Maze</h2>
+<div class="container">
+	<div class="row">
+		<div class="align-self-center">
+			{% load static %}
+			<img height="200px", width="250px", src="{% static "myWebsite/Pacman.png" %}"/>
+		</div>
+		<div class="align-self-end">
+			<p> This project was done in my AI class to visualize various search algorithms, specifically Depth First, Bredth First, Uniform Cost, and A*. While I did not make the visuals myself (emulating such visuals would be a whole project on its own), I implemented the search algorithms and watched the little pac go. If you would like to check this out further, check out the github page. The code for the searches are in search.py. For arguments to run the pacs and more information on intent of the assignment, check out the "Assignment1_ProblemA" PDF. </p> <br>
+		</div>
+
+		<div class="col-1.5">
+			{% load static %}
+			<img height="100px", width="100px", src="{% static "myWebsite/GitHub-Mark.png" %}"/>
+
+		</div>
+		<div class="col-10.5", align="left", style="margin-top:30px">
+			<div class="link">
+				<b><a href="https://github.com/Luna-McBride/CSCI-3202-Intro-to-AI/tree/master/Homework1", target="_blank"> Pac Project Github </a></b>
+			</div>
+	</div>
+</div>
 </div>
 <hr class="mt-0 mb-4">
 <br><br>
@@ -70,6 +97,7 @@ My Projects
 				<b><a href="https://github.com/Luna-McBride/Data_Science_A-Z---Udemy/tree/master/Data%20Preparation/20200210%20HW%20VehicleService", target="_blank"> VehicleServices Github </a></b>
 			</div>
 	</div>
+</div>
 </div> 
 <hr class="mt-0 mb-4">
 <br><br>
@@ -94,8 +122,7 @@ My Projects
 				<b><a href="https://github.com/Luna-McBride/CSCI-3202-Intro-to-AI/tree/master/Homework4", target="_blank"> Neural Network (Homework 4) Github </a></b>
 			</div>
 	</div>
-</div> <br><br
+</div> <br><br>
 	</div>
-</div>
 <br> <br>
 {% endblock %}

@@ -10,3 +10,6 @@ def about(response):
 
 def projects(response):
 	return render(response, "myWebsite/projects.html", {})
+
+def inprogress(response):
+	return render(response, "myWebsite/in-progress.html", {})

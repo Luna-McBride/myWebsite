@@ -1,0 +1,81 @@
+{% extends 'myWebsite/base.html' %}
+
+{% block title %}
+In Progress
+{% endblock %}
+
+{% block page %}
+In Progress
+{% endblock %}
+
+{% block content %}
+<h2 style="padding-left: 30px;">Android Studio/Swift Project</h2> <br>
+<div class="container", style="padding-left: 30px;">
+	<div class="row">
+		<div class="align-self-start">
+			<p> {% load static %} <img class="img-thumbnail float-left", height="400px", width="200px" src="{% static "myWebsite/MapsApp.png" %}"/> This is a project meant to levarage the mobile platform. It currently is just in Android Studio, but I intend to try and build it with Swift as well once it is sufficiently finished in Android in an attempt to simulate the overall mobile development experience.</p>
+			<p>As for the app itself, this app is meant to provide a solution to finding less commonplace products in establishments around their town. This is especially useful for products that are hard to ship from amazon for one reason or another (such as needing to be kept cold, needing to be kept from bouncing around, products coming from a faraway place that just takes forever to ship, or just being a fruit), as vendors already have mechanisms in place to protect products that would likely be absurdly expensive to do just to send a few items directly to someone's home. </p>
+			<p>Of course, we cannot guarentee any of these items are in a specific town. It is hard to check every store for every niche item. That is where the request system comes in. It is not implemented yet, but the hope is to make it so users can request certain items that they do not know whether or not a certain item exists where they live. Another user in the area can then come along who has seen the product before in a store, then mark that product being in that store. That connection is then stored and can be access from the item search function for other people who may want the same product.</p>
+		</div>
+	</div>
+</div>
+<hr class="mt-0 mb-4">
+<br>
+
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<h2>Use Case</h2>
+			<br>
+			<p>Say we have a user, Sally, who has been searching for some Natto around the Denver area. Natto generally needs to be kept cold, so ordering it online just runs the risk of molding, especially if being shipped directly from Japan. She posts the request for Natto in the Denver area and waits for a response. Later on, another user, May, sees the request, and just so happens to know you can get Natto at the Pacific Mercantile Company in downtown Denver. She completes the form and provides the address, which is not only held in the app's system for other people who may want Natto, but is also sent to Sally. Now, backed with this knowledge, Sally can go to the Pacific Mercantile Company and get her sought after Natto.</p>
+			<br>
+			<h2>Intended Functionality</h2>
+			<br>
+			<ul>
+				<li>General Maps Functionality</li>
+					<ul>
+						<li>Autocomplete</li>
+						<li>Points of Interest</li>
+					</ul>
+				<li>Item Search</li>
+					<ul>
+						<li>Find already connected items through a simple search</li>
+					</ul>
+				<li>Request Handling</li>
+					<ul>
+						<li>Allow users to request items they want to find</li>
+						<li>Allow other users to answer those requests with stores they know have the product</li>
+					</ul>
+				<li>Add Items</li>
+					<ul>
+						<li>Touch a point of interest and add an item, thus linking items to stores without the need of a request</li>
+						<li>Form options emphasizing if the item is limited time or only available during certain times of the year.</li>
+					</ul>
+				<li>Settings</li>
+			</ul>
+			<br>
+
+			<h2>Upsides of Such an App</h2>
+			<br>
+			<ul>
+				<li>People can find a product they have been looking for</li>
+				<li>Location data means no more ambiguity on which location in the case of a chain</li>
+				<li>Potentially introduces people to smaller businesses they otherwise would have never known existed</li>
+				<li>No need to wait on the long shipping times that can occur sometimes with products from faraway countries</li>
+				<li>Fruit items can be looked at for quality rather than relying on the person shipping it</li>
+			</ul>
+			<br>
+
+			<h2>Downsides of Such an App</h2>
+			<br>
+			<ul>
+				<li>You have to leave your house to go get the product</li>
+				<li>Without tapping into store databases, the app cannot guarentee if a product is in stock</li>
+				<li>Reliance on users makes the process slow if the userbase is small</li>
+				<li>The product is not guarenteed to be sold nearby.</li>
+			</ul>
+			<br>
+		</div>
+	</div>
+</div>
+{% endblock %}
