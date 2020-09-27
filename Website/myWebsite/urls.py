@@ -7,5 +7,5 @@ urlpatterns = [
 	path("projects/",views.projects, name="projects"), #Leads to the projects function in views.py
 	path("",views.home, name="home"), #Leads to the home function in views.py
 	path("about/",views.about, name="about"), #Leads to the about page via views.py
-	path("in-progress/",views.inprogress, name="inprogress"), #Leads to the in-progress projects function in views.py
+	#path("in-progress/",views.inprogress, name="inprogress"), #Leads to the in-progress projects function in views.py
 ]
